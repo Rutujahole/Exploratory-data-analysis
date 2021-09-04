@@ -1,0 +1,37 @@
+Number is Perfect or not:
+ Note:- Perfect number is the number whose sum of divisors will be a perfect number. For example : 6 divisors are 1,2,3,6.
+But 6 number itself cannot be considered a divisor. Therefore, the divisors are 1,2,3. The addition of these 3 nos is 6. And it is equal to the number to which we are finding divisors for.
+Pseudo code:
+Start.
+Declare variables. Num for user number, i for iteration, and initialize sum=0.(note:nsum is to be initialized in order not to receive garbage value at the end of program).
+Take the input number “num” from the user.
+Start the for loop for (i=0;1<num;i++)
+Check for the condition if(num % i==0)
+If true sum=sum+i if not come out of loop.
+Check condition if(sum == num) return number is perfect else return not the perfect number
+
+Program:
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,i,sum=0;
+    cout<<"Enter te number\n";
+    cin>>num;
+    for(i=1;i<num;i++)
+    {
+        if(num % i == 0)
+        {
+          sum=sum+i;
+        }
+    }
+    if(sum == num)
+     cout<<"the number "<<num<<" is perfect number\n"<<endl;
+    else
+      cout<<"the number "<<num<<" is not perfect number\n"<<endl;
+    
+
+    return 0;
+}
